@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit List</title>
+    <style>
+        ul {
+       padding: 0;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            margin: 20px ;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="fruit-container"></div>
+
+    <script>
+      // قائمة الفواكه مع روابط الصور الخاصة بها
+const fruits = [
+    { name: 'apple', img: 'images.jpg' },
+    { name: 'banana', img: '222.jpg' },
+    { name: 'grape', img: '444.jpg' },
+    { name: 'orange', img: '3333.jpg' },
+    { name: 'strawberry', img: '555.jpg' }
+];
+
+// حاوية القائمة
+const container = document.getElementById('fruit-container');
+const ul = document.createElement('ul');
+
+// إنشاء العناصر وإضافتها
+fruits.forEach(fruit => {
+    const li = document.createElement('li');
+    const img = document.createElement('img');
+
+    // تعيين الرابط والنص البديل للصورة
+    img.src = fruit.img; // رابط الصورة
+    img.alt = fruit.name; // نص بديل
+
+    // إضافة النص مباشرة إلى العنصر
+    li.textContent = fruit.name;
+
+    // إضافة الصورة والنص إلى العنصر
+    li.appendChild(img);
+    ul.appendChild(li);
+});
+
+// إضافة القائمة إلى الصفحة
+container.appendChild(ul);
+
+    </script>
+</body>
+</html>

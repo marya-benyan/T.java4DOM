@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function findIndex(arr, num) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === num) {
+            return i; // إذا وُجد الرقم، أرجع الفهرس
+        }
+    }
+    return -1; // إذا لم يُوجد، أرجع -1
+}
+
+// اختبار الدالة
+console.log(findIndex([10, 20, 30, 40], 30)); // النتيجة: 2
+console.log(findIndex([10, 20, 30, 40], 50)); // النتيجة: -1
+
+        
+    </script>
+</body>
+</html>
